@@ -6,11 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+    <!-- Bootstrap CSS -->    
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cabin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Sacramento|Cabin&display=swap" rel="stylesheet">
     
     <script src="https://kit.fontawesome.com/4f57decedc.js" crossorigin="anonymous"></script>
 
@@ -18,46 +16,114 @@
     
     <body>
         <header>
-            <div id="logo">Rosemary Fortanely</div>
+            <img class="me" src="images/me.png">
             
-            <img src="images/rosemary.jpeg">
-            <div class="row">
-                <a class="btn btn-dark" href="/docs/resume.pdf" role="button" download><i class="far fa-file"></i> Resumé</a>
-                <a class="btn btn-dark" href="http://github.com/codesmary" role="button"><i class="fab fa-github"></i> GitHub</a>
-                <a class="btn btn-dark" href="https://www.linkedin.com/in/rosemary-fortanely/" role="button"><i class="fab fa-linkedin"></i> LinkedIn</a>            
+            <div id="banner">
+                <a href="#about-me">About</a>
+                <a href="experience">Experience</a>
+                <a href="projects">Projects</a>
             </div>
-                
+
+            <h1>I'm Rosemary.</h1>
+            <div id="intro"><p>a Junior CS major / Studio Art minor at UT Austin.</p></div>
+            <img class="cloud right-cloud" src="images/cloud.svg">
+            <img class="cloud left-cloud" src="images/cloud.svg">
+            <img id="land" src="images/land.svg">
         </header>
         
         <div id="about-me">
-            <h1>About</h1>
-            <div id="intro"><p>I'm a Junior CS Major/Studio Art Minor at UT Austin.</p></div>
-            <p>My areas of interest include machine learning and algorithms. I like to spend my free time working on side projects, participating in Hackathons and solving puzzles on CodeForces and LeetCode.</p>
+            <img src="images/me.png">
+            <h2>Hi.</h2>
+            <div id="intro">I'm a web developer / machine learning engineer based in Austin, Texas. I have a passion for creative forms of data generation.</div>
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+
+        <div id="experience-header">
+            <h1>Experience</h1>
+            <img class="cloud right-cloud" src="images/cloud.svg">
+            <img class="cloud left-cloud" src="images/cloud.svg">
+            <img class="flag right-flag" src="images/flag.svg">
+            <img class="flag left-flag" src="images/flag.svg">
         </div>
 
         <div id="experience">
-            <h1>Experience</h1>
             <div class="experience-entity">
+                <div id="upcoming-role-images">
+                    <img class="me" src="images/me.png">
+                    <div class="circle">
+                        <img class="snap" src="images/snap-inc.png"/>
+                    </div>
+                </div>
                 <h2>Snap Inc.</h2>
-                <img src="images/snap-inc.png"/>
                 <p>I am excited to be joining Snap Inc. this upcoming Summer 2020 as a Software Development Intern in their Seattle location!</p>
             </div>
             
+            <h1>What I've done.</h1>
+
             <div class="experience-entity">
+                <div class="circle-2">
+                    <img class="microsoft" src="images/microsoft.png"/>
+                </div>
                 <h2>Microsoft</h2>
-                <img src="images/microsoft.png"/>
-                <p>While with the Intune team for Summers 2018 &amp; 2019, I pipelined insights generated from logging analytics into a Power BI report using Excel. For scoping out a project, I created spec for the UX design of Microsoft Edge browser settings in Intune portal. Finally, I wrote programs in C# and TypeScript to provide Intune cloud support for Microsoft Edge browser settings.</p>
+                <p>While with the Intune team, I pipelined insights from logging analytics into a Power BI report using excel, created a spec for the UX of Microsoft Edge browser settings in the Intune portal and wrote programs in C# and TypeScript to provide cloud support for these settings.</p>
             </div>
             
             <div class="experience-entity">
+                <div class="circle-2">
+                    <img class="ut" src="images/ut.png"/>
+                </div>
                 <h2>The University of Texas at Austin</h2>
-                <img src="images/ut.png"/>
-                <p>When working with the Computational Materials stream, I spent time researching and implementing optimization algorithms using python. Additionally, for presentations, I generated visualizations of hyperparameter tuning with NumPy.</p>
+                <p>When working with the Computational Materials stream, I implemented optimization algorithms using python and generated visualizations of hyperparameter tuning with NumPy.</p>
+            </div>
+
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
             </div>
         </div>
 
-        <div id="projects">
+        <div id="projects-header">
             <h1>Projects</h1>
+            <img class="cloud right-cloud" src="images/cloud.svg">
+            <img class="cloud left-cloud" src="images/cloud.svg">
+            <img class="flag right-flag" src="images/flag.svg">
+            <img class="flag left-flag" src="images/flag.svg">
+        </div>
+
+        <div id="projects">
+            <img class="pencil" src="images/pencil.svg">
+            <h2>What I've been up to.</h2>
+            <p>Here's a selection of some recent work. For a comprehensive view of what I'm working on, you can visit me on <a href="http://github.com/codesmary">GitHub</a>.</p>
+        </div>
+        <div id="hover-items">
+            <div class="hover-item" on click="https://github.com/codesmary/fullstack-nanodegree-vm">
+                <img src="images/manager.png"/>
+                <h2><a href="https://github.com/codesmary/fullstack-nanodegree-vm">Restaurant Manager</a></h2>
+                <p>This website is a manager for an assortment of restaurants and their menus. It's supported with a Flask/python back-end and has a HTML/CSS front-end. This was created for the Udacity Full Stack Foundations course.</p>
+            </div>
+            <div class="hover-item" on click="https://github.com/codesmary/Hackathon-Idea-Generator">
+                <img src="images/idea-generator.png" width=300 height=300/>
+                <h2><a href="https://github.com/codesmary/Hackathon-Idea-Generator">Idea Generator</a></h2>
+                <p>This tool generates hackathon ideas. It works by scraping devpost.com for project descriptions of trending projects, and training gpt-2-simple on these descriptions. This was created as a personal side project.</p>
+            </div>    
             <div class="hover-item" on click="https://github.com/codesmary/Tab-Generator">
                 <img src="images/tabgen.png"/>
                 <h2><a href="https://github.com/codesmary/Tab-Generator">TabGen</a></h2>
@@ -92,7 +158,14 @@
 
       <!-- FOOTER -->
       <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
+        <div class="row">
+            <a class="item-left" href="docs/resume.pdf" download="resume-rfortanely">resumé</a>
+            <a class="item-right" href="http://github.com/codesmary">github</a>
+        </div>
+        <div class="row">
+            <a class="item-left" href="https://www.linkedin.com/in/rosemary-fortanely/">linkedin</a>          
+            <a class="item-right" href="mailto:elizabeth.fortanely@gmail.com">hire me</a>  
+        </div>
         <p> Made with <i class="fas fa-heart"></i> by Rosemary Fortanely</p>
       </footer>
       <!-- END FOOTER -->
