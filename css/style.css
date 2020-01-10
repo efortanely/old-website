@@ -305,6 +305,10 @@ header .left-cloud{
     margin-bottom: 50px;
 }
 
+#projects a{
+    color: #4AB19A;
+}
+
 #hover-items{
     text-align: center;
 }
@@ -402,4 +406,16 @@ footer p{
 
 .fa-heart{
     color: #545454;
+}
+
+@media screen and (min-width: 600px){    
+    #experience .circle{
+        left: 90%;
+    }
+}
+
+@media screen and (min-width: 900px){    
+    #experience .circle{
+        left: 95%;
+    }
 }
