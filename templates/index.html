@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->    
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
     <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Sacramento|Cabin&display=swap" rel="stylesheet">
     
     <script src="https://kit.fontawesome.com/4f57decedc.js" crossorigin="anonymous"></script>
@@ -16,23 +16,24 @@
     
     <body>
         <header>
-            <img class="me" src="images/me.png">
+            <img class="me" src="static/me.png">
             
             <div id="banner">
                 <a href="#about-me">About</a>
                 <a href="#experience-header">Experience</a>
                 <a href="#projects-header">Projects</a>
+                <a href="/blog">Blog</a>
             </div>
 
             <h1>I'm Rosemary.</h1>
             <div id="intro"><p>A Junior CS major / Studio Art minor at UT Austin.</p></div>
-            <img class="cloud right-cloud" src="images/cloud.svg">
-            <img class="cloud left-cloud" src="images/cloud.svg">
-            <img id="land" src="images/land.svg">
+            <img class="cloud right-cloud" src="static/cloud.svg">
+            <img class="cloud left-cloud" src="static/cloud.svg">
+            <img id="land" src="static/land.svg">
         </header>
         
         <div id="about-me">
-            <img src="images/me.png">
+            <img src="static/me.png">
             <h2>Hi.</h2>
             <div id="intro">I'm a web developer / machine learning engineer based in Austin, Texas. I have a passion for creative forms of data generation.</div>
             <div class="dots">
@@ -51,18 +52,18 @@
 
         <div id="experience-header">
             <h1>Experience</h1>
-            <img class="cloud right-cloud" src="images/cloud.svg">
-            <img class="cloud left-cloud" src="images/cloud.svg">
-            <img class="flag right-flag" src="images/flag.svg">
-            <img class="flag left-flag" src="images/flag.svg">
+            <img class="cloud right-cloud" src="static/cloud.svg">
+            <img class="cloud left-cloud" src="static/cloud.svg">
+            <img class="flag right-flag" src="static/flag.svg">
+            <img class="flag left-flag" src="static/flag.svg">
         </div>
 
         <div id="experience">
             <div class="experience-entity">
                 <div id="upcoming-role-images">
-                    <img class="me" src="images/me.png">
+                    <img class="me" src="static/me.png">
                     <div class="circle">
-                        <img class="snap" src="images/snap-inc.png"/>
+                        <img class="snap" src="static/snap-inc.png"/>
                     </div>
                 </div>
                 <h2>Snap Inc.</h2>
@@ -73,7 +74,7 @@
 
             <div class="experience-entity">
                 <div class="circle-2">
-                    <img class="microsoft" src="images/microsoft.png"/>
+                    <img class="microsoft" src="static/microsoft.png"/>
                 </div>
                 <h2>Microsoft</h2>
                 <p>While with the Intune team, I pipelined insights from logging analytics into a Power BI report using excel, created a spec for the UX of Microsoft Edge browser settings in the Intune portal and wrote programs in C# and TypeScript to provide cloud support for these settings.</p>
@@ -81,7 +82,7 @@
             
             <div class="experience-entity">
                 <div class="circle-2">
-                    <img class="ut" src="images/ut.png"/>
+                    <img class="ut" src="static/ut.png"/>
                 </div>
                 <h2>The University of Texas at Austin</h2>
                 <p>When working with the Computational Materials stream, I implemented optimization algorithms using python and generated visualizations of hyperparameter tuning with NumPy.</p>
@@ -102,55 +103,55 @@
 
         <div id="projects-header">
             <h1>Projects</h1>
-            <img class="cloud right-cloud" src="images/cloud.svg">
-            <img class="cloud left-cloud" src="images/cloud.svg">
-            <img class="flag right-flag" src="images/flag.svg">
-            <img class="flag left-flag" src="images/flag.svg">
+            <img class="cloud right-cloud" src="static/cloud.svg">
+            <img class="cloud left-cloud" src="static/cloud.svg">
+            <img class="flag right-flag" src="static/flag.svg">
+            <img class="flag left-flag" src="static/flag.svg">
         </div>
 
         <div id="projects">
-            <img class="pencil" src="images/pencil.svg">
+            <img class="pencil" src="static/pencil.svg">
             <h2>What I've been up to.</h2>
             <p>Here's a selection of some recent work. For a comprehensive view of what I'm working on, you can visit me on <a href="http://github.com/codesmary">GitHub</a>.</p>
         </div>
         <div id="hover-items">
             <div class="hover-item" on click="https://github.com/codesmary/fullstack-nanodegree-vm">
-                <img src="images/manager.png"/>
+                <img src="static/manager.png"/>
                 <h2><a href="https://github.com/codesmary/fullstack-nanodegree-vm">Restaurant Manager</a></h2>
                 <p>This website is a manager for an assortment of restaurants and their menus. It's supported with a Flask/python back-end and has a HTML/CSS front-end. This was created for the Udacity Full Stack Foundations course.</p>
             </div>
             <div class="hover-item" on click="https://github.com/codesmary/Hackathon-Idea-Generator">
-                <img src="images/idea-generator.png" width=300 height=300/>
+                <img src="static/idea-generator.png" width=300 height=300/>
                 <h2><a href="https://github.com/codesmary/Hackathon-Idea-Generator">Idea Generator</a></h2>
                 <p>This tool generates hackathon ideas. It works by scraping devpost.com for project descriptions of trending projects, and training gpt-2-simple on these descriptions. This was created as a personal side project.</p>
             </div>    
             <div class="hover-item" on click="https://github.com/codesmary/Tab-Generator">
-                <img src="images/tabgen.png"/>
+                <img src="static/tabgen.png"/>
                 <h2><a href="https://github.com/codesmary/Tab-Generator">TabGen</a></h2>
                 <p>This tool allows for the generation of ukulele tabs based on a number of artists for inspiration. This is done by scraping Ultimateguitar.com for the discography of these artists and training a neural network on the collected tabs. This was created as a personal side project.</p>
             </div>
             <div class="hover-item" on click="https://github.com/codesmary/EmotiSong">
-                <img src="images/emotisong.png"/>
+                <img src="static/emotisong.png"/>
                 <h2><a href="https://github.com/codesmary/EmotiSong">EmotiSong</a></h2>
                 <p>EmotiSong is an Android app that works to bring people together via music! Simply take a selfie of a group of people, and using its database of songs, it selects the song best fitting the mood of everyone and plays it. This was created for the Microsoft Intune Hackathon 2018.</p>
             </div>
             <div class="hover-item" on click="https://github.com/codesmary/Hijinx">
-                <img src="images/hijinx.png"/>
+                <img src="static/hijinx.png"/>
                 <h2><a href="https://github.com/codesmary/Hijinx">Hijinx</a></h2>
                 <p>Hijinx is a magical game demo! Elevating a custom Java game engine and pixel art graphics, we follow the adventures of a witch and her black cat as they venture through the night, with their mirror portals to guide them along the way. This was created for WiCS Hacks 2018.</p>
             </div>
             <div class="hover-item" on click="https://github.com/codesmary/Parametric-Plotter">
-                <img src="images/parametric.png"/>
+                <img src="static/parametric.png"/>
                 <h2><a href="https://github.com/codesmary/Parametric-Plotter">Parametric Plotter</a></h2>
                 <p>This plotter contains tools for graphing three-dimensional parametric surfaces in a scene that can be freely rotated. There's the option to define parameters for built-in functions, as well as the ability to define custom equations. This was created as a personal side project.</p>
             </div>
             <div class="hover-item" on click="https://github.com/codesmary/LeetCode-Solutions">
-                <img src="images/leetcode.png"/>
+                <img src="static/leetcode.png"/>
                 <h2><a href="https://github.com/codesmary/LeetCode-Solutions">LeetCode Solutions</a></h2>
                 <p>This contains a collection of all the solutions I have created in response to problems on leetcode.com.</p>
             </div>
             <div class="hover-item" on click="https://github.com/codesmary/Codeforces-Solutions">
-                <img src="images/codeforces.png"/>
+                <img src="static/codeforces.png"/>
                 <h2><a href="https://github.com/codesmary/Codeforces-Solutions">Codeforces Solutions</a></h2>
                 <p>This contains a collection of all the solutions I have created in response to problems on codeforces.com. A large majority of these were for a Competitive Programming class.</p>
             </div>
@@ -159,7 +160,7 @@
       <!-- FOOTER -->
       <footer class="container">
         <div class="row">
-            <a class="item-left" href="docs/resume.pdf" download="resume-rfortanely">resumé</a>
+            <a class="item-left" href="static/resume.pdf" download="resume-rfortanely">resumé</a>
             <a class="item-right" href="http://github.com/codesmary">github</a>
         </div>
         <div class="row">

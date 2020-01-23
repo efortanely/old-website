@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Rosemary Fortanely Blog</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->    
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Sacramento|Cabin&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/4f57decedc.js" crossorigin="anonymous"></script>
+
+  </head>
+    
+    <body>
+        <header>
+            <img class="me" src="static/me.png">
+            
+            <div id="banner">
+                <a href="/../#about-me">About</a>
+                <a href="/../#experience-header">Experience</a>
+                <a href="/../#projects-header">Projects</a>
+                <a href="/blog">Blog</a>
+            </div>
+        </header>
+        <div id="blog-header">
+            <h1>Blog</h1>
+            <img class="cloud right-cloud" src="static/cloud.svg">
+            <img class="cloud left-cloud" src="static/cloud.svg">
+            <img class="flag right-flag" src="static/flag.svg">
+            <img class="flag left-flag" src="static/flag.svg">
+        </div>
+
+        <div id="all-posts">
+            {% for post in posts %}
+            <h2><a href="{{url_for('blogPost', post_date=post.date, post_title=post.title.replace(' ', '-')) }}">{{post.title}}</a></h2>
+            <h3>{{post.date}}</h3>
+            <p>{{post.content[:150].replace('<br>', ' ') + '...'}}</p>
+            {% endfor %}
+        </div>
+
+
+        <footer class="container">
+            <div class="row">
+                <a class="item-left" href="static/resume.pdf" download="resume-rfortanely">resumé</a>
+                <a class="item-right" href="http://github.com/codesmary">github</a>
+            </div>
+            <div class="row">
+                <a class="item-left" href="https://www.linkedin.com/in/rosemary-fortanely/">linkedin</a>          
+                <a class="item-right" href="mailto:elizabeth.fortanely@gmail.com">hire me</a>  
+            </div>
+            <p> Made with <i class="fas fa-heart"></i> by Rosemary Fortanely</p>
+          </footer>
+    </body>
+</html>
