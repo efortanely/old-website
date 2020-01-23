@@ -12,14 +12,14 @@ Base.metadata.bind = engine
 def home():
     return render_template('index.html')
 
-@app.route('/blog')
+@app.route('/blog.html')
 def blog():
     DBSession = sessionmaker(bind = engine)
     session = DBSession()
     posts = session.query(BlogPost)
     return render_template('blog.html', posts=posts)
 
-@app.route('/blog/<string:post_date>' + '<string:post_title>')
+@app.route('/blog/<string:post_date>' + '<string:post_title>.html')
 def blogPost(post_date, post_title):
     return render_template('posts/' + post_date + post_title + '.html')
     
