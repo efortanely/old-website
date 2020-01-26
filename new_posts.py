@@ -53,4 +53,40 @@ except:
     session.add(new_post)
     session.commit()
 
+new_post = BlogPost(
+    title="CS373 Spring 2020: Rosemary Fortanely", 
+    date="1-25-2020", 
+    content="<img src='/static/rosemary.jpeg' align='left' class='border'> Okay, so I guess this is the part \
+        where I talk about myself. I grew up in the Austin area, but more specifically Pflugerville for people \
+        that are actually from the Austin area. I went to three high schools (whee!), Pflugerville \
+        High School, then Texas Connections Academy, then Pflugerville again, and then Hendrickson High \
+        School. During this time I spent a lot of time not being particularly academically interested, until \
+        I took a physics class and realized that problem solving was actually something I found quite exciting. \
+        After this point I was in a handful of activities: Art club, Karate, and UIL CS/Math. I actually ended \
+        up coming to UT after being CAPped to UT Arlington for a year and somehow managed to transfer in. I was \
+        one of the lucky ones, I guess! I'm majoring in CS because I thought I wanted to be a EE major after my \
+        physics courses, but then realized CS is a lot cooler, haha. Thanks older brother!\
+        <br><br>I'm taking SWE because I heard Downing was a professor that was a 'must-take'. \
+        I think I'm already pretty well-versed with full-stack web apps. I built this website and am generally pretty \
+        good with Flask/Database technologies/HTML/CSS. I think the only thing I'm weaker on is React and JS related \
+        web technologies. I thought the first couple of lectures were fine. I was mostly dredding getting cold called, \
+        but that hasn't happened yet! \
+        <br><br>I'm having a pretty good time because I'm currently at TAMUhack. Although I'm dreading \
+        what the sleep situation will be like since my Airbnb fell through, I'm quite happy with what \
+        I've accomplished. It's a tool that's meant to help blind people, a <a \
+        href='https://github.com/codesmary/PixReader'>screen reader</a> that not only reads text, but also 'reads' \
+        images through the use of computer vision. I finished my project within the first 5 hours, so now I'm just \
+        working on this blog post, haha. That was pretty satisfying since I've never finished such a lofty project so \
+        fast! \
+        <br><br>My tip of the week is don't trust everything you see online. I was trying to use a \
+        pretrained model that seemed to provide great results on the blog post about it, but after I \
+        spent forever trying to get it to work, it output captions for images as primitive as 'adult' \
+        and 'cat'. Such a bummer."
+)
+try:
+    session.query(BlogPost).filter_by(title=new_post.title).one()
+except:
+    session.add(new_post)
+    session.commit()
+
 generate_html()

@@ -3,6 +3,7 @@ from database_setup import Base, BlogPost
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from datetime import datetime
+import re
 
 app = Flask(__name__)
 
@@ -19,6 +20,8 @@ def blog():
     session = DBSession()
     posts = [post for post in session.query(BlogPost)]
     posts.sort(key=lambda post: datetime.strptime(post.date, '%m-%d-%Y'), reverse=True)
+    for post in posts:
+        post.content = re.sub("<img.+'border'>", '', post.content.replace('<br>', ' '))[:150] + '...'
     return render_template('blog.html', posts=posts)
 
 @app.route('/blog/<string:post_date>' + '<string:post_title>.html')

@@ -512,6 +512,16 @@ footer p{
     color: #4AB19A;
 }
 
+#post img{
+    width: 35%;
+}
+
+.border{
+    border-width: 25px;
+    border-color: white;
+    border-style: solid;
+}
+
 @media screen and (min-width: 600px){    
     header a{
         font-size: 20px;
@@ -519,6 +529,10 @@ footer p{
     
     #experience .circle{
         left: 90%;
+    }
+
+    #post img{
+        width: 200px;
     }
 }
 
@@ -537,5 +551,9 @@ footer p{
 
     #post p{
         width: 700px;
+    }
+
+    #post img{
+        width: 200px;
     }
 }

@@ -37,7 +37,7 @@
             {% for post in posts %}
             <h2><a href="{{url_for('blogPost', post_date=post.date, post_title=post.title.replace(' ', '-')) }}">{{post.title}}</a></h2>
             <h3>{{post.date}}</h3>
-            <p>{{post.content[:150].replace('<br>', ' ') + '...'}}</p>
+            <p>{{ post.content }}</p>
             {% endfor %}
         </div>
 
