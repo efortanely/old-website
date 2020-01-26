@@ -89,4 +89,17 @@ except:
     session.add(new_post)
     session.commit()
 
+new_post = BlogPost(
+    title="TAMUhack Demo", 
+    date="1-26-2020", 
+    content="<img src='/static/cat-1.jpg' align='left' class='border'> \
+        <img src='/static/bridge.jpeg' align='right' class='border'> \
+        <br><br><br><br><br><br><br><br><br>"
+)
+try:
+    session.query(BlogPost).filter_by(title=new_post.title).one()
+except:
+    session.add(new_post)
+    session.commit()
+
 generate_html()
