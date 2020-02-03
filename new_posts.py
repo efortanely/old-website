@@ -89,12 +89,44 @@ except:
     session.add(new_post)
     session.commit()
 
+session.delete(session.query(BlogPost).filter_by(title="CS373 Spring 2020: Rosemary Fortanely — Week of Jan. 27").one())
+session.commit()
+
 new_post = BlogPost(
-    title="TAMUhack Demo", 
-    date="1-26-2020", 
-    content="<img src='/static/cat-1.jpg' align='left' class='border'> \
-        <img src='/static/bridge.jpeg' align='right' class='border'> \
-        <br><br><br><br><br><br><br><br><br>"
+    title="CS373 Spring 2020: Rosemary Fortanely — Week of Jan. 27", 
+    date="2-2-2020", 
+    content="<img src='/static/rosemary.jpeg' align='left' class='border'>\
+    <b>1. What did you do this past week?</b>\
+    <br><br>Hello everyone! My past week was \
+    pretty good, I finally got my Collatz implementation working on Hackerrank. It was easy to get it \
+    working, but much harder to add caching and get it efficient enough to pass all three tests. I was \
+    disappointed to find with all the effort I put into the meta-cache, that it slowed down my implementation \
+    so much that it failed the second test, and once I removed it, my code was fast enough to pass it again. \
+    There were certainly some points where I felt like I just wanted to give up, but the tips we went over in \
+    class and the encouragement from my peers really helped. \
+    <br><br><b>2. What's in your way?</b>\
+    <br><br>Realistically, the only thing in my way is my willingness to work, but I'm pushing through it!\
+    <br><br><b>3. What will you do next week?</b>\
+    <br><br>At this point, I've finished the main objective of the assignment, that is, creating a cached \
+    implementation that will find maximum Collatz cycle lengths for a number of ranges. Now I just need to \
+    refactor my code, do testing, and all the other tasks we reviewed in order to closer adhere to the workflow \
+    for this class. \
+    <br><br><b>4. What was your experience with assertions, unit tests, coverage, and continuous integration?</b>\
+    <br><br>I've had experience with all the technologies we talked about this week, but found myself most \
+    comfortable with assertions, as I've worked with them for other classes (primarily in Java), unit tests, \
+    as I've had to create this for previous internships, and continuous integration, as I've found this to be \
+    standard at most places I've worked. It will be interesting to be looking at code coverage in python and \
+    learn more about that. \
+    <br><br><b>5. What made you happy this week?</b>\
+    <img src='/static/city-gouache.jpg' align='left' class='border'> \
+    <br><br>I was happy that I finished a gouache \
+    painting for the first time since last summer. I still have more practice to do since I was hoping for a \
+    more impressionistic style, but that will just take time (and possibly new brushes)! \
+    <br><br><b>6. What's your pick-of-the-week or tip-of-the-week?</b> \
+    <br><br>My pick-of-the-week is laser printing! I found it be a very powerful tool that complements any sort of \
+    encasing you'll need to do for hardware. Just create a box using any online tool and edit to have whatever \
+    sorts of features you need and you're done! I worked with a friend this week to create a prototype box to \
+    hold some hardware for a cat bot I've been working on, and it was a really fun process."
 )
 try:
     session.query(BlogPost).filter_by(title=new_post.title).one()
