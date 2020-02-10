@@ -134,4 +134,45 @@ except:
     session.add(new_post)
     session.commit()
 
+new_post = BlogPost(
+    title="CS373 Spring 2020: Rosemary Fortanely — Week of Feb. 3", 
+    date="2-9-2020", 
+    content="<img src='/static/rosemary.jpeg' align='left' class='border'>\
+    <b>1. What did you do this past week?</b>\
+    <br><br>Over this past week, I finished the Collatz project. This involved writing the 15 issues, unit \
+    and acceptance tests, and plugging in my code I had written for Hackerrank into Downing's boilerplate \
+    code. The whole project took me about 5 hours to finish. \
+    <br><br><b>2. What's in your way?</b>\
+    <br><br>I didn't have too many issues with completing these tasks as they weren't as intensive as writing \
+    the code to solve the problem itself. The main thing I had a little bit of trouble with was determining \
+    how to write a unit test that could catch when the code threw a certain exception, but after enough \
+    Googling I figured that out! \
+    <br><br><b>3. What will you do next week?</b>\
+    <br><br>I need to review the notes from Friday with a friend as I had to miss that class, and then I \
+    will begin the second project with my team. I'm excited to get into the meat of this class!\
+    <br><br><b>4. What was your experience of exceptions, types, and operators?</b>\
+    <br><br>I generally find myself using exceptions in code I write for hobby because they are a pretty \
+    helpful tool to trigger certain behaviours if the code breaks and makes debugging much easier. As for \
+    python types and operators, I consider myself pretty comfortable with them as I've slowly grown to adopt \
+    python as my language of choice. I had, however, never heard of frozenset! It was interesting to learn \
+    something new.\
+    <br><br><b>5. What made you happy this week?</b>\
+    <br><br>I travelled to Oklahoma this weekend to participate in Hacklahoma (which is also why I missed \
+    class Friday, as I mentioned), and really enjoyed my time there! They had great food, a fun origami \
+    workshop, and I got to stay in a hotel for a bit and change up my routine. My project I worked on is \
+    called SpotYourFriends, a web app that lets you create playlists with you friends that contain songs \
+    you all have in common. It does this by finding the intersect of all the songs in each user's library \
+    of playlists. It was built with Flask, Spotipy, HTML, CSS, and JavaScript. You can read more about it \
+    and check out the repo <a href='https://devpost.com/software/spotyourfriends'>here</a>.\
+    <br><br><b>6. What's your pick-of-the-week or tip-of-the-week?</b> \
+    <br><br>My pick-of-the-week is Spotipy, a python wrapper for the Spotify Web API. Although it wasn't \
+    perfect, it made working with Spotify for SpotYourFriends pretty easy."
+
+)
+try:
+    session.query(BlogPost).filter_by(title=new_post.title).one()
+except:
+    session.add(new_post)
+    session.commit()
+
 generate_html()
