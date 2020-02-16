@@ -175,4 +175,49 @@ except:
     session.add(new_post)
     session.commit()
 
+new_post = BlogPost(
+    title="CS373 Spring 2020: Rosemary Fortanely — Week of Feb. 10", 
+    date="2-15-2020", 
+    content="<img src='/static/rosemary.jpeg' align='left' class='border'>\
+    <b>1. What did you do this past week?</b>\
+    <br><br>Over the past week, I reviewed the operator material I missed last Friday and also started up on \
+    research with Connor for one of the project ideas for the upcoming website. We created the scheme for a \
+    few models, including the Pet, Breed, and Shelter model, as well as found a Austin Animal Center dataset \
+    of information over dog and cat intakes at a local shelter and a couple of APIs about cat and dog breeds, \
+    in addition to couple of adoption websites that can be scraped for data to supplement the Austin Animal \
+    Center dog and cat dataset.\
+    <br><br><b>2. What's in your way?</b>\
+    <br><br>Right now the group is mostly just waiting on having our first meeting before we go ahead with \
+    anything. Presumably in this meeting we will go over the results from a poll we set up to decide which \
+    project proposal we liked the most (a few of us proposed the animal adoption website, the Austin music \
+    website, and an exercise sources website), as well as determining what roles each of us want to take \
+    going forward for this first part of the project.\
+    <br><br><b>3. What will you do next week?</b>\
+    <br><br>I am not sure exactly which part of the project I will be working on, but my interests in web \
+    development probably lean more towards back-end development, but I would like to also improve my skills \
+    in front-end development, specifically in React and TypeScript, as well as graphic design.\
+    <br><br><b>4. What was your experience of Project #1: Collatz (the problem, the overkill requirements \
+    of submission, etc.)?</b>\
+    <br><br>I thought Collatz was a fun problem, but I do agree that all of the different tools we had to \
+    use and steps we had to go through to go from finishing the Hackerrank problem to turning in the final \
+    script and tests was kind of overwhelming. I got through it eventually though, and looking back on it, \
+    the hardest part was simply the Hackerrank portion and getting all the tests to pass. I think I just \
+    had a less favorable experience with the software engineering side of things because it felt like a \
+    bit of drudge work.\
+    <br><br><b>5. What made you happy this week?</b>\
+    <br><br>I was having some issues with getting authentication to work with the Spotify API for my \
+    SpotYourFriends side project, but I finally got that fixed so I could deploy it to Heroku and now \
+    it feels like a real thing instead of just a toy website I run from my terminal, which made me feel \
+    really excited!\
+    <br><br><b>6. What's your pick-of-the-week or tip-of-the-week?</b> \
+    <br><br>Heroku is a great tool for getting urls and hosting websites. It’s free at a certain tier \
+    and very straight forward to use!"
+
+)
+try:
+    session.query(BlogPost).filter_by(title=new_post.title).one()
+except:
+    session.add(new_post)
+    session.commit()
+
 generate_html()
