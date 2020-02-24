@@ -288,7 +288,7 @@ new_post = BlogPost(
     mini security lecture from the CEO of Chef Secure has given me a new perspective on \
     vulnerabilities online.\
     <br><br><b>5. What made you happy this week?</b>\
-    Today, my boyfriend, Connor, and I went to Michi Ramen off Lamar and I got some yummy ramen and \
+    <br><br>Today, my boyfriend, Connor, and I went to Michi Ramen off Lamar and I got some yummy ramen and \
     fries. Even though we had just been there last week for Valentine’s Day, I still enjoyed it \
     because they have top tier tofu.\
     <br><br><b>6. What's your pick-of-the-week or tip-of-the-week?</b> \
