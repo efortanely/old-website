@@ -302,4 +302,47 @@ except:
     session.add(new_post)
     session.commit()
 
+new_post = BlogPost(
+    title="CS373 Spring 2020: Rosemary Fortanely — Week of Feb. 24", 
+    date="3-1-2020", 
+    content="<img src='/static/rosemary.jpeg' align='left' class='border'>\
+    <b>1. What did you do this past week?</b>\
+    <br><br>I spent the last week helping some of the other people on my team with cleaning \
+    up their pages, specifically our model and instance pages. I fixed the layout of the \
+    pages and changed the styles to match our theme. I’m hoping we can have an attractive \
+    website at the end of this project, and something we can all be proud of.\
+    <br><br><b>2. What's in your way?</b>\
+    <br><br>Time was the main constraint. It would get stressful when people would put off \
+    committing code until closer to the deadline and there would be changes I wanted to \
+    make, but minimal time to spend to making them before it had to be done for Phase 1.\
+    <br><br><b>3. What will you do next week?</b>\
+    <br><br>My team is hopefully meeting on Tuesday, and at that point we will be having a \
+    retro for Phase 1 and going over the tasks for Phase 2 and breaking them down. My goal \
+    is to work on the back-end since I have substantial experience with Flask and \
+    SQLAlchemy (I even already use them for this website!)\
+    <br><br><b>4. What was your experience of comprehensions, generators, and yield?</b>\
+    <br><br>I love comprehensions. I was first exposed to them when I started with \
+    competitive programming in python as a Freshman in college and I thought back then it \
+    was the coolest thing. I was surprised that map and reduce are implemented as generators \
+    just because I don’t use them very often to begin with, and I had never read that before. \
+    I had also seen yield before, but didn’t entirely understand the difference between it \
+    and ‘return’. I had thought I was already a pretty skilled python developer before this \
+    class, but our lectures have been great to learn and show me just how much I didn’t know.\
+    <br><br><b>5. What made you happy this week?</b>\
+    <br><br>I just joined the club Freetail Hackers this semester and we put on our spring \
+    hackathon, LeapHacks, this last Saturday. I enjoyed getting to help with the program and \
+    make new friends while I was there.\
+    <br><br><b>6. What's your pick-of-the-week or tip-of-the-week?</b> \
+    <br><br>My pick-of-the-week is the framework we’re required to use for Phase 2’s back-end, \
+    Flask! I first set out to learn it after seeing it come up again and again in hackathon \
+    projects I’ve seen friends make, and after picking it up, I’ve made many projects with it \
+    myself! It’s relatively straightforward to understand, and it’s a great tool for making \
+    dynamic web apps with."
+)
+try:
+    session.query(BlogPost).filter_by(title=new_post.title).one()
+except:
+    session.add(new_post)
+    session.commit()
+
 generate_html()
