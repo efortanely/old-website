@@ -345,4 +345,42 @@ except:
     session.add(new_post)
     session.commit()
 
+new_post = BlogPost(
+    title="CS373 Spring 2020: Rosemary Fortanely — Week of Mar. 2", 
+    date="3-8-2020", 
+    content="<img src='/static/rosemary.jpeg' align='left' class='border'>\
+    <b>1. What did you do this past week?</b>\
+    <br><br>I spent the last week working on the back-end implementation for Phase 2 of our IDB project. I \
+    have been creating the models for the database, as well as writing our Pets4Me API that will be called \
+    by our front-end. Additionally, since there is a test coming up this week, I have been studying old \
+    Hackkerank questions for that. Since all of my notes for this class are only about a page long, I’m \
+    hoping to be able to condense it all into a nice study sheet for the test before Wednesday.\
+    <br><br><b>2. What's in your way?</b>\
+    <br><br>I picked up the tasks I did because I had worked with Flask before so I assumed the way the \
+    routing for the API would work would be the same, but it ended up being different for Flask-Restless \
+    so I had to get accustomed to that. Getting used to that different library was the main obstacle.\
+    <br><br><b>3. What will you do next week?</b>\
+    <br><br>I have to finish writing tests for my API using both unittest and Postman. I feel comfortable \
+    that I'll be able to write unit tests since I have experience with modifying the database and getting \
+    responses from an API, but I'll need to learn about something called 'stubs' I think to be able to finish \
+    those without permanently messing up the database. I'm more worried about using Postman since I haven't \
+    written anything using Postman for a couple of years.\
+    <br><br><b>4. What was your experience of =, *, **, and decorators?</b>\
+    <br><br>I had used = before, but *, **, and decorators were mostly new to me. I had a tough time with the \
+    quiz, but I've been studying for the test and I feel confident that I'll be able to nail it then.\
+    <br><br><b>5. What made you happy this week?</b>\
+    <br><br>My team got our grade back for Phase 1, and I'm glad we did well on our first project. There were \
+    some minor errors, but we discussed them and surely we'll do better next time. We made a pseudo-deadline \
+    for a week before the project is due, so hopefully, that'll help us with tying loose ends long before the \
+    project is due.\
+    <br><br><b>6. What's your pick-of-the-week or tip-of-the-week?</b> \
+    <br><br>My tip of the week is to start early on coding projects! Save yourself the undue stress by giving \
+    yourself adequate time to finish the task at hand."
+)
+try:
+    session.query(BlogPost).filter_by(title=new_post.title).one()
+except:
+    session.add(new_post)
+    session.commit()
+
 generate_html()
