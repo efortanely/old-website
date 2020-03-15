@@ -383,4 +383,31 @@ except:
     session.add(new_post)
     session.commit()
 
+# post = session.query(BlogPost).filter_by(title="CS373 Spring 2020: Rosemary Fortanely — Week of Mar. 9").one()
+# session.delete(post)
+# session.commit()
+
+new_post = BlogPost(
+    title="CS373 Spring 2020: Rosemary Fortanely — Week of Mar. 9", 
+    date="3-15-2020", 
+    content="<img src='/static/rosemary.jpeg' align='left' class='border'>\
+    <b>1. What did you do this past week?</b>\
+    <br><br>This last week, I implemented some unit tests in python for the API I worked on the week before last. They were pretty straightforward, just testing status codes for each of the models, but it should get more complicated once more query parameters and filtering are added for the next phase. I also began writing the definition for our API in Postman.\
+    <br><br><b>2. What's in your way?</b>\
+    <br><br>I will probably be making slow progress on writing the Postman definitions. It’s incredibly tedious. Also, I’m still waiting on one of our hosting guys to help me with troubleshooting getting access to the PostgreSQL database instance, and once that’s working, I can merge my repo and get our back-end in the cloud.\
+    <br><br><b>3. What will you do next week?</b>\
+    <br><br>I’ll keep working on writing the Postman definitions. Additionally, once the back-end is merged and working, I’ll write the Postman tests for it. I’m hoping the extra week we got thanks to the world ending will help with getting everything done in time.\
+    <br><br><b>4. What was your experience of Test #1a?</b>\
+    <br><br>I had a hard time with time management for question 2. I spent a long time on question 2 trying to get my way through the solution, and once I finally did that, I was able to do question 3 pretty fast, and then I really didn’t have enough time for finishing question 1. I think Test #1b will go smoother.\
+    <br><br><b>5. What made you happy this week?</b>\
+    <br><br>Me and my boyfriend went to Sip Pho on Friday since classes were cancelled. I certainly enjoyed that more than taking the second part of our test. It was nice to take a break since we had both been really busy this week with wrapping up everything before spring break started. I wish spring break was a series of holidays spread out over the course of the semester instead of an entire week so this stressful week didn’t need to occur.\
+    <br><br><b>6. What's your pick-of-the-week or tip-of-the-week?</b> \
+    <br><br>I’ve been using ‘jsonschema.net’ for creating the Postman definitions from my json output from our API. I still pick through the auto generated output to create something a little cleaner, but overall it’s been rather helpful for doing a lot of the work for that portion of the project."
+)
+try:
+    session.query(BlogPost).filter_by(title=new_post.title).one()
+except:
+    session.add(new_post)
+    session.commit()
+
 generate_html()
