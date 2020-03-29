@@ -383,10 +383,6 @@ except:
     session.add(new_post)
     session.commit()
 
-# post = session.query(BlogPost).filter_by(title="CS373 Spring 2020: Rosemary Fortanely — Week of Mar. 9").one()
-# session.delete(post)
-# session.commit()
-
 new_post = BlogPost(
     title="CS373 Spring 2020: Rosemary Fortanely — Week of Mar. 9", 
     date="3-15-2020", 
@@ -403,6 +399,29 @@ new_post = BlogPost(
     <br><br>Me and my boyfriend went to Sip Pho on Friday since classes were cancelled. I certainly enjoyed that more than taking the second part of our test. It was nice to take a break since we had both been really busy this week with wrapping up everything before spring break started. I wish spring break was a series of holidays spread out over the course of the semester instead of an entire week so this stressful week didn’t need to occur.\
     <br><br><b>6. What's your pick-of-the-week or tip-of-the-week?</b> \
     <br><br>I’ve been using ‘jsonschema.net’ for creating the Postman definitions from my json output from our API. I still pick through the auto generated output to create something a little cleaner, but overall it’s been rather helpful for doing a lot of the work for that portion of the project."
+)
+try:
+    session.query(BlogPost).filter_by(title=new_post.title).one()
+except:
+    session.add(new_post)
+    session.commit()
+
+# post = session.query(BlogPost).filter_by(title="CS373 Spring 2020: Rosemary Fortanely — Week of Mar. 9").one()
+# session.delete(post)
+# session.commit()
+
+new_post = BlogPost(
+    title="CS373 Spring 2020: Rosemary Fortanely — Week of Mar. 16", 
+    date="3-28-2020", 
+    content="<img src='/static/rosemary.jpeg' align='left' class='border'>\
+    <b>1. Are you and your family safe and sound where you are?</b>\
+    <br><br>Currently, I am by myself in my studio apartment, but I am doing well. I had a group chat with 8 of my other family members earlier this morning and everyone is currently staying put and coronavirus-free, so I count that as a win.\
+    <br><br><b>2. How do feel about your ability to finish the term completely online?</b>\
+    <br><br>I’m kind of worried. I don’t have a great track record for online classes, so I hope that’s not the case this time.\
+    <br><br><b>3. What made you happy this week?</b>\
+    <br><br>I finished a sewing project I had been putting off while school was in session, and gave them to my boyfriend! I used what I thought was a really cute teal fabric with white stars, but all he had to say about it was that it looked patriotic. Oh well. I also bought 7 pairs of earrings in the last 2 days. I haven’t worn earrings in years, but everyone has them on TikTok and I felt inspired to start wearing them.\
+    <br><br><b>4. What's your pick-of-the-week or tip-of-the-week?</b>\
+    <br><br>My tip-of-the-week is to check your Xbox One before buying physical games. My edition doesn’t have a disk drive, which I didn’t realize, and I wasted $40 on Amazon when I should have just bought digital."
 )
 try:
     session.query(BlogPost).filter_by(title=new_post.title).one()
