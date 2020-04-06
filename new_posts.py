@@ -429,4 +429,27 @@ except:
     session.add(new_post)
     session.commit()
 
+new_post = BlogPost(
+    title="CS373 Spring 2020: Rosemary Fortanely — Week of Mar. 30", 
+    date="4-5-2020", 
+    content="<img src='/static/rosemary.jpeg' align='left' class='border'>\
+    <b>1. What did you do this past week?</b>\
+    <br><br>This last week I mostly tied up loose eds on the project for submission this last Tuesday, as well as cleaned up and added some new features for the upcoming Phase 3. Related to Phase 2, I wrote the Postman tests, updated the Postman documentation, and made the UML diagram. Once we had turned that in, I found a better solution for our dog and cat breed photos and implemented that, as well as overall cleaned up the front-end, including some minor aesthetic changes and standardizing the naming layout for our files.\
+    <br><br><b>2. What's in your way?</b>\
+    <br><br>This week my workload is getting in the way of what I’d like to accomplish. I have multiple exams and projects due, as well as another website commitment as a Technical Organizer in Freetail Hackers.\
+    <br><br><b>3. What will you do next week?</b>\
+    <br><br>So far, my workload includes adding some minor changes to our API to better suite the front-end, as well as adding logic for computing the distance between shelters and the user. I also need to ensure the method we decided on for filtering and sorting works as expected, and I would like to write some templates for that for our front-end developers to copy and paste.\
+    <br><br><b>4. What was your experience of Test #1b?</b>\
+    <br><br>I was incredibly stressed out. My Zoom account decided it didn’t want to work and I couldn’t get into a testing room. Thankfully, I was in the room with one of my group partners, so after one of the TA’s mentioned we could work together, I settled for that and collaborated with my group via his machine.\
+    <br><br><b>5. What made you happy this week?</b>\
+    <br><br>I started on an art challenge and have been creating art every day this April. I’d like to keep it up for the rest of this month. Here’s a couple of the pieces I’ve made:<img src='/static/baby.jpg' align='left' class='border'><img src='/static/baby.jpg' align='left' class='border' style='width:300px;'><img src='/static/clouds.jpg' align='left' class='border' style='width:300px;'>\
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><b>6. What's your pick-of-the-week or tip-of-the-week?</b> \
+    <br><br>My tip-of-the-week is to double check your configurations if using GCP. We accidentally selected a database option that wasn’t on the free tier and it started eating into our credits and broke our website on the day we had to turn it in. We quickly added some of our $50 credits, but in the meantime have found a permanent solution by switching to another database solution in GCP."
+)
+try:
+    session.query(BlogPost).filter_by(title=new_post.title).one()
+except:
+    session.add(new_post)
+    session.commit()
+
 generate_html()
