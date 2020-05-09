@@ -452,4 +452,37 @@ except:
     session.add(new_post)
     session.commit()
 
+new_post = BlogPost(
+    title="CS373 Spring 2020: Rosemary Fortanely — Final Entry", 
+    date="5-9-2020", 
+    content="<img src='/static/rosemary.jpeg' align='left' class='border'>\
+    <b>What did you like the least about the class?</b>\
+    <br><br>The hardest part for me to get through was probably the lectures. Admittedly, I found them a little dry and I was always a little anxious waiting to see if it was my turn to be called on or not. It was also hard to feel motivated to learn from the lectures since a lot of the time it was very disconnected from the projects themselves.\
+    <br><br><b>What did you like the most about the class?</b>\
+    <br><br>I really enjoyed getting to work on a big software project, something that we don’t get the chance to do as often as I’d like at UT, even though that is most likely what we will end up doing the rest of our careers. It’s very enjoyable to shift away from theory and work on some code.\
+    <br><br><b>What's the most significant thing you learned?</b>\
+    <br><br>I realized how much there is to learn in the field of web development. Even though I had experience with static websites, I realized how much more effort there is to create a dynamic website.\
+    <br><br><b>How many hours a week did you spend coding/debugging/testing for this class?</b>\
+    <br><br>The majority of the work in this class was spent on projects. For the earlier projects, I spent maybe 5-8 hours a week working, and during the website phase, I spent closer to 10-15 hours a week of work.\
+    <br><br><b>How many hours a week did you spend reading/studying for this class?</b>\
+    <br><br>I spent maybe 1 hour studying a week, and closer to 3-5 when it came to the weeks of tests.\
+    <br><br><b>How many lines of code do you think you wrote?</b>\
+    <br><br>I would say close to 3,000 lines of code.\
+    <br><br><b>What required tool did you not know and now find very useful?</b>\
+    <br><br>I had never used Flask-Restless before, and really enjoyed how it automated a lot of the work that would be required to otherwise do manually, such as how it automatically implemented filtering and sorting.\
+    <br><br><b>What's the most useful Web dev tool that your group used that was not required?</b>\
+    <br><br>I used Marvel App to create mock-ups of all our pages before implementing them, and I thought that was really helpful in getting a concrete layout created before touching any code, and made front-end design development much easier.\
+    <br><br><b>How did you feel about your group having to self-teach many, many technologies?</b>\
+    <br><br>It was very intimidating in the beginning to think about all the things I’d have to implement, while having no idea going into it how to even start. I think it was more-so a mental game more than anything. Looking back on it, it wasn’t all that bad, it just took time and a lot of documentation reading, but the real challenge is convincing yourself that you’re capable.\
+    <br><br><b>How did you feel about the two-stage quizzes and tests?</b>\
+    <br><br>I was very thankful to be able to depend on my peers for help if I didn’t manage to get it the first time.\
+    <br><br><b>How did you feel about the cold calling, in the end?</b>\
+    <br><br>Cold calling always made me feel really anxious."
+)
+try:
+    session.query(BlogPost).filter_by(title=new_post.title).one()
+except:
+    session.add(new_post)
+    session.commit()
+
 generate_html()
